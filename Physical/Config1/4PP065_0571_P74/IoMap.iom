@@ -1,0 +1,13 @@
+VAR_CONFIG
+	::SDCAxisCtr:pwm_period AT %QW."X20MM4456".PeriodDurationPWM;
+	::SDCAxisCtr:coil_pwm_value AT %QW."X20MM4456".PulseWidthCurrentPWM04;
+	::SDCAxisCtr:pos_hand_btn AT %IX."X20DI9371".DigitalInput02;
+	::SDCAxisCtr:neg_hand_btn AT %IX."X20DI9371".DigitalInput03;
+	::SDCAxisCtr:coil_powered AT %IX."X20DI9371".DigitalInput01;
+	::SDCAxisCtr:axis_X.pwm_value AT %QW."X20MM4456".PulseWidthCurrentPWM02;
+	::SDCAxisCtr:axis_X.reset_error AT %QX."X20MM4456".ClearError02; (*Clear error motor bridge 01, clear endswitch*)
+	::SDCAxisCtr:axis_X.reset_counter AT %QX."X20MM4456".ResetCounter02; (*Reset counter01 (1=reset active, 0=reset not active)*)
+	::SDCAxisCtr:axis_X.endswitch_a_reached AT %IX."X20MM4456".StatusInput07; (*Logical condition input 03=Motor 01:R*)
+	::SDCAxisCtr:axis_X.endswitch_b_reached AT %IX."X20MM4456".StatusInput08; (*Logical condition input 04=Motor 01:Reference enable/trigger/endswitch*)
+	::SDCAxisCtr:axis_X.counter AT %IW."X20MM4456".Counter02; (*Count 01*)
+END_VAR
